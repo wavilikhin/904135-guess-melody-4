@@ -1,5 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
+import PropTypes from 'prop-types'
 
 const WelcomeScreen = ({errorCount}) => {
     return <section className="welcome">
@@ -13,6 +14,10 @@ const WelcomeScreen = ({errorCount}) => {
       </ul>
       <p className="welcome__text">Удачи!</p>
     </section>
+}
+
+WelcomeScreen.propTypes = {
+  errorCount: PropTypes.number.isRequired
 }
 
 export default  WelcomeScreen
